@@ -1,10 +1,23 @@
-# swv-series-alt-dnc
+# os3w Sailwave Effects
 
-> Effects for Sailwave sailing results and scoring software.
+> Effects for [Sailwave](https://www.sailwave.com/) sailing results and scoring
+> software including alternative calulation of series results.
 
-## Quick start
+## Getting started
 
-Follow the instructions at https://os3w.github.io/os3w-sailwave-effects/
+1. Download the file for the effect(s) you want:
+
+   - <a href="./dist/CountOnlyQualifiers.js" download>CountOnlyQualifiers.js</a>
+
+   - <a href="./dist/CountOnlyQualifyingRaces.js" download>CountOnlyQualifyingRaces.js</a>
+
+2. Copy it to the Sailwave effects folder. You can open this up within Sailwave
+   by choosing \
+   Setup → Global options → My script files → View folder content.
+
+3. Add the effect when publishing from Sailwave by choosing the Effects button
+   from the final screen before publication where the destination and file name
+   are selected.
 
 ## Result modifying effects
 
@@ -39,43 +52,10 @@ This is designed to implement the following changes to RRS 2020-2024:
 
 This is designed to implement the following change to RRS 2020-2024 **in
 addition to** the changes above for the
-[Count Only Qualifiers](#count-only-qualifiers) effect.
+[Count Only Qualifiers](#md:count-only-qualifiers) effect.
 
 - In rule Rule 90.3(a) the words "one boat" are replaced with "one boat that
   qualifies for the series in accordance with Rule A2.2".
 
 **Use with caution** this effect does not currently alter the number of
 discards to take account of races that have been excluded as not sailed.
-
-## Development
-
-Download and install.
-
-```console
-$ git clone https://github.com/os3w/swv-series-alt-dnc.git
-$ npm install
-```
-
-Lint and format.
-
-```console
-$ npm run lint:fix
-```
-
-Unit tests (need work and more coverage).
-
-```console
-$ npm run test:unit
-```
-
-Build.
-
-```console
-$ npm run build
-```
-
-Docs.
-
-```console
-$ npm run docs
-```

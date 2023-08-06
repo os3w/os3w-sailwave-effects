@@ -1,0 +1,12 @@
+# .gitignore
+
+node_modules
+package-lock.json
+coverage
+
+# Module distribution files.
+types
+/index.*
+
+# Do NOT ignore browser entry points.
+# dist
