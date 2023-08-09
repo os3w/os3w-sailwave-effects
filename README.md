@@ -1,4 +1,4 @@
-# swv-series-alt-dnc
+# os3w Sailwave Effects
 
 > Effects for Sailwave sailing results and scoring software.
 
@@ -52,7 +52,7 @@ discards to take account of races that have been excluded as not sailed.
 Download and install.
 
 ```console
-$ git clone https://github.com/os3w/swv-series-alt-dnc.git
+$ git clone https://github.com/os3w/os3w-sailwave-effects.git
 $ npm install
 ```
 
