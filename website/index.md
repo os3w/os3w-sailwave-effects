@@ -13,7 +13,7 @@
 
 2. Copy it to the Sailwave effects folder. You can open this up within Sailwave
    by choosing \
-   Setup → Global options → My script files → View folder content.
+   Setup → Global options → Folders → My script files → View folder content.
 
 3. Add the effect when publishing from Sailwave by choosing the Effects button
    from the final screen before publication where the destination and file name
