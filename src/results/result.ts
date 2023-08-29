@@ -36,6 +36,6 @@ export const cameToStartingArea = (code: string | null) =>
  * @returns The result if sailed, otherwise false.
  */
 export const checkIsSailedResult = (result: Result): SailedResult | false =>
-  (result as unknown as NotSailedResult).isNotSailed === true
+  !result || (result as unknown as NotSailedResult).isNotSailed === true
     ? false
     : (result as SailedResult);

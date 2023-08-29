@@ -124,7 +124,7 @@ export const getDiscardIndexes = (
 };
 
 export const recalculateGroupRankings = (group: Group) => {
-  console.log('Before', JSON.parse(JSON.stringify(group.competitors)));
+  // console.log('Before', JSON.parse(JSON.stringify(group.competitors)));
   // Sort into the new rank order.
   group.competitors.sort(compareSeriesResults);
 
@@ -135,7 +135,7 @@ export const recalculateGroupRankings = (group: Group) => {
     if (competitor.rank === DNQ) break;
     competitor.rank = rank;
   }
-  console.log('After', JSON.parse(JSON.stringify(group.competitors)));
+  // console.log('After', JSON.parse(JSON.stringify(group.competitors)));
 };
 
 export const scoreGroup = (group: Group) => {

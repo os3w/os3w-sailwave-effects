@@ -64,6 +64,12 @@ export class GroupTableParser {
     }
   }
 
+  /**
+   * Parse the score element.
+   *
+   * @param element td element with the score.
+   * @returns
+   */
   protected parseRaceScore(element: HTMLElement): Result {
     const html = element.innerHTML;
     if (html === '&nbsp;') {
@@ -160,12 +166,23 @@ export const parseRank = (text: string | null): number | 'DNQ' => {
   return parseFloat(text);
 };
 
+/**
+ * Parse text containing a (possibly discarded) score, possibly with a code.
+ * @param text
+ * @returns
+ */
 export const parseRaceScore = (text: string) => {
   const isDiscard = text.charAt(0) === '(';
   const rawText = isDiscard ? text.slice(1, -1) : text;
   const score = parseValue(rawText);
-  const spacePos = rawText.indexOf(' ');
-  const code = spacePos < 0 ? null : rawText.slice(spacePos + 1);
+  // If we have a score then we need to check for a code.
+  let code;
+  if (Number.isNaN(score)) {
+    code = rawText.length > 0 ? rawText : null;
+  } else {
+    const spacePos = rawText.indexOf(' ');
+    code = spacePos < 0 ? null : rawText.slice(spacePos + 1);
+  }
   const isCts = code === null ? true : cameToStartingArea(code);
   return { isCts, isDiscard, score, code };
 };

@@ -136,7 +136,7 @@ ${bannerLines}
 for (const { input, file, banner } of sailwaveEffectBuilds) {
   builds.push({
     input,
-    output: { file, format: 'iife', banner },
+    output: { file, format: 'iife', sourcemap: true, banner },
     plugins: [
       json(),
       typescript({ compilerOptions: { target } }),
